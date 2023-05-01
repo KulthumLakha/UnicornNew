@@ -17,23 +17,7 @@ let map;
         window.location.href = '/signin.html';
     });
     
-    function getAvatar() {
-  // Get the selected color and name from the select and input elements
-  const colorSelect = document.getElementById("avatar-color-select");
-  const selectedColor = colorSelect.value;
-  const nameInput = document.getElementById("avatar-name-input");
-  const name = nameInput.value;
 
-  // Call the UI Avatars API with the selected color and name
-  const apiUrl = `https://ui-avatars.com/api/?name=${name}&background=${selectedColor}&size=300`;
-  const imgElement = document.createElement("img");
-  imgElement.src = apiUrl;
-
-  // Display the returned image in the image container div
-  const imageContainer = document.getElementById("avatar-image-container");
-  imageContainer.innerHTML = "";
-  imageContainer.appendChild(imgElement);
-}
 
 
 
