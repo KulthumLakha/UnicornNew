@@ -16,31 +16,6 @@ let map;
         alert(error);
         window.location.href = '/signin.html';
     });
-    
-    function getUnicorn() {
-  // Retrieve selected color from dropdown list
-  var color = document.getElementById("color").value;
-  
-  // Construct URL for Unicornify API
-  var url = "https://unicornify.pictures/api?color=" + color + "&size=300";
-  
-  // Send HTTP GET request to API
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
-  xhr.responseType = "blob";
-  xhr.onload = function() {
-    if (this.status == 200) {
-      // Convert blob response to object URL
-      var objectURL = URL.createObjectURL(this.response);
-      
-      // Display unicorn image in div
-      var img = document.createElement("img");
-      img.src = objectURL;
-      document.getElementById("unicorn-image").appendChild(img);
-    }
-  };
-  xhr.send();
-}
 
 
     //  requestUnicorn
