@@ -18,6 +18,7 @@
           crossorigin=""/>
     <link rel="stylesheet" href="/css/ride.css">
     <link rel="stylesheet" href="/css/message.css">
+    <script src="avatar.js"></script>
 </head>
     
 
@@ -36,23 +37,24 @@
         </div>
         <div class="panel-heading">
             <div id="avatar-image-container">
-                <img src="https://ui-avatars.com/api/?size=50" alt="Avatar">
+                <img id="avatar" src="https://via.placeholder.com/150" alt="Avatar">
             </div>
         </div>
         <div class="panel-body">
             <ol id="updates">
                 <li>Welcome! Click the map to set your pickup location.</li>
                 <li>
-                    <label for="avatar-name-input">Name:</label>
-                    <input type="text" id="avatar-name-input">
-                    <label for="avatar-color-select">Color:</label>
-                    <select id="avatar-color-select">
-                        <option value="">Select a color</option>
-                        <option value="blue">Blue</option>
-                        <option value="green">Green</option>
-                        <option value="red">Red</option>
-                    </select>
-                    <button onclick="getAvatar()">Personalise Avatar</button>
+                    <form id="avatar-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="color">Color:</label>
+                        <select id="color" name="color">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select><br>
+                        <button type="submit">Submit</button>
+                    </form>
                 </li>
             </ol>
         </div>
