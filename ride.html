@@ -35,26 +35,50 @@
                 </ul>
             </div>
         </div>
-        <div class="panel-heading">
-            <div id="avatar-image-container">
-                <img id="avatar" src="https://via.placeholder.com/150" alt="Avatar">
-            </div>
-        </div>
         <div class="panel-body">
             <ol id="updates">
                 <li>Welcome! Click the map to set your pickup location.</li>
-                <li>
+                <li> Avatar
                     <form id="avatar-form">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name"><br>
-                        <label for="color">Color:</label>
-                        <select id="color" name="color">
-                            <option value="red">Red</option>
-                            <option value="blue">Blue</option>
-                            <option value="green">Green</option>
-                        </select><br>
-                        <button type="submit">Submit</button>
-                    </form>
+                <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      
+      <label for="color">Background Color:</label>
+      <select id="color" name="color">
+        <option value="000000">Black</option>
+        <option value="FFFFFF">White</option>
+        <option value="FF0000">Red</option>
+        <option value="00FF00">Green</option>
+        <option value="0000FF">Blue</option>
+      </select><br><br>
+
+      <button type="submit">Generate Avatar</button>
+    </form>
+
+    <img id="avatar" src="" alt="Avatar Preview">
+
+    <script>
+      const form = document.getElementById('avatar-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nameInput = document.getElementById('name');
+        const colorSelect = document.getElementById('color');
+        const avatarImg = document.getElementById('avatar');
+
+        const name = nameInput.value;
+        const color = colorSelect.value;
+
+        const url = `https://ui-avatars.com/api/?name=${name}&background=${color}`;
+
+        avatarImg.src = url;
+      });
+    </script>
+
+
+
+
+
                 </li>
             </ol>
         </div>
