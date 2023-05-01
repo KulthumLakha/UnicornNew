@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>Kulthum's Wild Rydes App</title>
+    <title>Yousif's Wild Rydes App</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,11 @@
           crossorigin=""/>
     <link rel="stylesheet" href="/css/ride.css">
     <link rel="stylesheet" href="/css/message.css">
-    <script src="avatar.js"></script>
+    
+    <a class="weatherwidget-io" href="https://forecast7.com/en/32d78n96d80/dallas/" data-label_1="DALLAS" data-label_2="WEATHER" data-theme="original" >DALLAS WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 </head>
     
 
@@ -38,48 +42,6 @@
         <div class="panel-body">
             <ol id="updates">
                 <li>Welcome! Click the map to set your pickup location.</li>
-                <li> Avatar
-                    <form id="avatar-form">
-                <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br><br>
-      
-      <label for="color">Background Color:</label>
-      <select id="color" name="color">
-        <option value="000000">Black</option>
-        <option value="FFFFFF">White</option>
-        <option value="FF0000">Red</option>
-        <option value="00FF00">Green</option>
-        <option value="0000FF">Blue</option>
-      </select><br><br>
-
-      <button type="submit">Generate Avatar</button>
-    </form>
-
-    <img id="avatar" src="" alt="Avatar Preview">
-
-    <script>
-      const form = document.getElementById('avatar-form');
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const nameInput = document.getElementById('name');
-        const colorSelect = document.getElementById('color');
-        const avatarImg = document.getElementById('avatar');
-
-        const name = nameInput.value;
-        const color = colorSelect.value;
-
-        const url = `https://ui-avatars.com/api/?name=${name}&background=${color}`;
-
-        avatarImg.src = url;
-      });
-    </script>
-
-
-
-
-
-                </li>
             </ol>
         </div>
     </div>
