@@ -37,6 +37,19 @@
         <div class="panel-body">
             <ol id="updates">
                 <li>Welcome! Click the map to set your pickup location.</li>
+                <li>
+                    <form>
+                        <label for="color">Choose a unicorn color:</label>
+                        <select id="color" name="color">
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="purple">Purple</option>
+                        </select>
+                        <br><br>
+                        <button type="button" onclick="getUnicorn()">Ride a unicorn</button>
+                    </form>
+                    <div id="unicorn-image"></div>
+                </li>
             </ol>
         </div>
     </div>
